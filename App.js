@@ -6,62 +6,62 @@ import AppButton from "./changeColorButton"
 import TextBox from "./TextBox"
 
 export default function App() {
-  const [colorBlack, setColorBlack] = useState("white");
-  const [colorBlackSwitch, setColorBlackSwitch] = useState(false);
-  const [colorRed, setColorRed] = useState("white");
-  const [colorRedSwitch, setColorRedSwitch] = useState(false);
-  const [colorGreen, setColorGreen] = useState("white");
-  const [colorGreenSwitch, setColorGreenSwitch] = useState(false);
-  const [colorOrange, setColorOrange] = useState("white");
-  const [colorOrangeSwitch, setColorOrangeSwitch] = useState(false);
+  const [colorIndigo, setcolorIndigo] = useState("white");
+  const [colorIndigoSwitch, setcolorIndigoSwitch] = useState(false);
+  const [colorMaroon, setcolorMaroon] = useState("white");
+  const [colorMaroonSwitch, setcolorMaroonSwitch] = useState(false);
+  const [colorNavy, setcolorNavy] = useState("white");
+  const [colorNavySwitch, setcolorNavySwitch] = useState(false);
+  const [colorSalmon, setcolorSalmon] = useState("white");
+  const [colorSalmonSwitch, setcolorSalmonSwitch] = useState(false);
 
-  const blackButtonClick = (colorBlack) => {
-    if (colorBlackSwitch === false) {
-      setColorBlack(colorBlack), setColorBlackSwitch(!colorBlackSwitch);
+  const blackButtonClick = (colorIndigo) => {
+    if (colorIndigoSwitch === false) {
+      setcolorIndigo(colorIndigo), setcolorIndigoSwitch(!colorIndigoSwitch);
     } else {
-      setColorBlack("white"), setColorBlackSwitch(!colorBlackSwitch);
+      setcolorIndigo("white"), setcolorIndigoSwitch(!colorIndigoSwitch);
     }
   };
 
-  const redButtonClick = (colorRed) => {
-    if (colorRedSwitch === false) {
-      setColorRed(colorRed), setColorRedSwitch(!colorRedSwitch);
+  const redButtonClick = (colorMaroon) => {
+    if (colorMaroonSwitch === false) {
+      setcolorMaroon(colorMaroon), setcolorMaroonSwitch(!colorMaroonSwitch);
     } else {
-      setColorRed("white"), setColorRedSwitch(!colorRedSwitch);
+      setcolorMaroon("white"), setcolorMaroonSwitch(!colorMaroonSwitch);
     }
   };
 
-  const greenButtonClick = (colorGreen) => {
-    if (colorGreenSwitch === false) {
-      setColorGreen(colorGreen), setColorGreenSwitch(!colorGreenSwitch);
+  const greenButtonClick = (colorNavy) => {
+    if (colorNavySwitch === false) {
+      setcolorNavy(colorNavy), setcolorNavySwitch(!colorNavySwitch);
     } else {
-      setColorGreen("white"), setColorGreenSwitch(!colorGreenSwitch);
+      setcolorNavy("white"), setcolorNavySwitch(!colorNavySwitch);
     }
   };
 
-  const orangeButtonClick = (colorOrange) => {
-    if (colorOrangeSwitch === false) {
-      setColorOrange(colorOrange), setColorOrangeSwitch(!colorOrangeSwitch);
+  const orangeButtonClick = (colorSalmon) => {
+    if (colorSalmonSwitch === false) {
+      setcolorSalmon(colorSalmon), setcolorSalmonSwitch(!colorSalmonSwitch);
     } else {
-      setColorOrange("white"), setColorOrangeSwitch(!colorOrangeSwitch);
+      setcolorSalmon("white"), setcolorSalmonSwitch(!colorSalmonSwitch);
     }
   };
   return (
     <View style={styles.container}>
       <View style={styles.uppersectionleft}>
-       <AppButton title="Button1" onPress={() => blackButtonClick("black")}/>
-        <AppButton title="Button2" onPress={() => redButtonClick("red")}/>
+       <AppButton title="Button1" onPress={() => blackButtonClick("indigo")}/>
+        <AppButton title="Button2" onPress={() => redButtonClick("maroon")}/>
        
       </View>
       <View style={styles.uppersectionright}>
-        <AppButton title="Button3" onPress={() => greenButtonClick("green")} />
-        <AppButton title="Button4" onPress={() => orangeButtonClick("orange")} />
+        <AppButton title="Button3" onPress={() => greenButtonClick("navy")} />
+        <AppButton title="Button4" onPress={() => orangeButtonClick("salmon")} />
       </View>
      <View style={styles.lowersection}>
-     <TextBox title="Text1" color={colorBlack}></TextBox>
-     <TextBox title="Text2" color={colorRed}></TextBox>
-     <TextBox title="Text3" color={colorGreen}></TextBox>
-     <TextBox title="Text4" color={colorOrange}></TextBox>
+     <TextBox title="Text1" color={colorIndigo}></TextBox>
+     <TextBox title="Text2" color={colorMaroon}></TextBox>
+     <TextBox title="Text3" color={colorNavy}></TextBox>
+     <TextBox title="Text4" color={colorSalmon}></TextBox>
      </View>
     </View>
   );
